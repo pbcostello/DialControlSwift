@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" customModule="DialControlSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bhg-re-nBT">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YJ-5G-Ljf" userLabel="container">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XzT-LZ-bc4" userLabel="Label0">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XzT-LZ-bc4" secondAttribute="height" multiplier="125:18" id="BMk-s9-8cN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-SQ-Ixn" userLabel="Label1">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yrl-SQ-Ixn" secondAttribute="height" multiplier="125:18" id="U8J-NJ-oRC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-gg-WC9" userLabel="DialUI View 1" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zny-Ci-TmM"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zny-Ci-TmM" firstAttribute="leading" secondItem="aXk-gg-WC9" secondAttribute="leading" id="2j7-ig-aq1"/>
+                                            <constraint firstAttribute="width" secondItem="aXk-gg-WC9" secondAttribute="height" multiplier="1:1" id="IYV-Uf-zgT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zny-Ci-TmM" secondAttribute="trailing" id="JHT-oX-thz"/>
+                                            <constraint firstItem="Zny-Ci-TmM" firstAttribute="top" secondItem="aXk-gg-WC9" secondAttribute="top" id="i5c-KU-Fvf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zny-Ci-TmM" secondAttribute="bottom" id="rqY-za-HDP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="background" destination="Zny-Ci-TmM" id="Ldg-F1-Yzd"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="R8D-Dx-byz"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-9s-5qJ" userLabel="DialUI View 2" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie02.png" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-U6-Bhi"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uXj-U6-Bhi" secondAttribute="trailing" id="5a9-lN-ERo"/>
+                                            <constraint firstItem="uXj-U6-Bhi" firstAttribute="leading" secondItem="DXj-9s-5qJ" secondAttribute="leading" id="Rtp-Rc-fBL"/>
+                                            <constraint firstAttribute="bottom" secondItem="uXj-U6-Bhi" secondAttribute="bottom" id="c28-Db-rah"/>
+                                            <constraint firstItem="uXj-U6-Bhi" firstAttribute="top" secondItem="DXj-9s-5qJ" secondAttribute="top" id="qFN-Wb-3g2"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="background" destination="uXj-U6-Bhi" id="ph6-pF-GnI"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="v5P-9X-fCJ"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XzT-LZ-bc4" firstAttribute="top" secondItem="aXk-gg-WC9" secondAttribute="bottom" constant="0.5" id="1nu-5a-vM1"/>
+                                    <constraint firstItem="DXj-9s-5qJ" firstAttribute="top" secondItem="5YJ-5G-Ljf" secondAttribute="top" constant="1" id="7b5-ly-jxX"/>
+                                    <constraint firstAttribute="width" secondItem="5YJ-5G-Ljf" secondAttribute="height" multiplier="91:30" id="8Tt-Tr-oBk"/>
+                                    <constraint firstItem="aXk-gg-WC9" firstAttribute="leading" secondItem="5YJ-5G-Ljf" secondAttribute="leading" id="9q3-cL-V5U"/>
+                                    <constraint firstItem="yrl-SQ-Ixn" firstAttribute="centerX" secondItem="DXj-9s-5qJ" secondAttribute="centerX" id="DbI-42-85D"/>
+                                    <constraint firstItem="yrl-SQ-Ixn" firstAttribute="width" secondItem="DXj-9s-5qJ" secondAttribute="width" id="Dmh-uu-AVu"/>
+                                    <constraint firstItem="DXj-9s-5qJ" firstAttribute="height" secondItem="aXk-gg-WC9" secondAttribute="height" id="Lz5-ZA-ZLs"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXk-gg-WC9" secondAttribute="trailing" multiplier="3.5" constant="1" id="OgE-wO-Tws"/>
+                                    <constraint firstItem="XzT-LZ-bc4" firstAttribute="width" secondItem="aXk-gg-WC9" secondAttribute="width" id="PS6-zn-bCN"/>
+                                    <constraint firstItem="XzT-LZ-bc4" firstAttribute="centerX" secondItem="aXk-gg-WC9" secondAttribute="centerX" id="SVO-1z-Uha"/>
+                                    <constraint firstItem="DXj-9s-5qJ" firstAttribute="width" secondItem="aXk-gg-WC9" secondAttribute="width" id="X10-QX-ZSg"/>
+                                    <constraint firstAttribute="trailing" secondItem="DXj-9s-5qJ" secondAttribute="trailing" constant="1" id="ovT-dW-x5c"/>
+                                    <constraint firstItem="yrl-SQ-Ixn" firstAttribute="top" secondItem="DXj-9s-5qJ" secondAttribute="bottom" constant="0.5" id="sUd-hx-V8h"/>
+                                    <constraint firstItem="aXk-gg-WC9" firstAttribute="top" secondItem="5YJ-5G-Ljf" secondAttribute="top" constant="1" id="tud-TP-Jbv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin the dials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Yv-YxN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="0ci-bu-ynY"/>
+                                    <constraint firstAttribute="height" constant="21" id="qsn-Ah-Ulg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eyq-Yv-YxN" firstAttribute="centerX" secondItem="bhg-re-nBT" secondAttribute="centerX" id="9kt-So-clT"/>
+                            <constraint firstItem="5YJ-5G-Ljf" firstAttribute="centerY" secondItem="bhg-re-nBT" secondAttribute="centerY" constant="0.5" id="FGI-2E-yjB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="5YJ-5G-Ljf" secondAttribute="leading" id="rhr-Se-voA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5YJ-5G-Ljf" secondAttribute="trailing" id="sMm-ip-HaQ"/>
+                            <constraint firstItem="eyq-Yv-YxN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="slY-eX-a2F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="labels" destination="XzT-LZ-bc4" collectionClass="NSMutableArray" id="bTh-tj-4Go"/>
+                        <outletCollection property="labels" destination="yrl-SQ-Ixn" collectionClass="NSMutableArray" id="CT9-ir-Bu7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207.5" y="110.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pie01.png" width="300" height="300"/>
+        <image name="pie02.png" width="300" height="300"/>
+    </resources>
+</document>
