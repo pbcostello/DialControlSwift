@@ -15,6 +15,8 @@
 		4F25D48C1DA42B56006B685B /* pie01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F25D48A1DA42B56006B685B /* pie01.png */; };
 		4F25D48D1DA42B56006B685B /* pie02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F25D48B1DA42B56006B685B /* pie02.png */; };
 		4F25D48F1DA42F8F006B685B /* DialUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D48E1DA42F8F006B685B /* DialUIView.swift */; };
+		4FB54EDB1DB0CC45003C2970 /* CGPoint+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */; };
+		4FB54EDC1DB0CC45003C2970 /* CGSize+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4F25D48A1DA42B56006B685B /* pie01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie01.png; sourceTree = "<group>"; };
 		4F25D48B1DA42B56006B685B /* pie02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie02.png; sourceTree = "<group>"; };
 		4F25D48E1DA42F8F006B685B /* DialUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialUIView.swift; sourceTree = "<group>"; };
+		4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+ext.swift"; path = "extensions/CGPoint+ext.swift"; sourceTree = "<group>"; };
+		4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGSize+ext.swift"; path = "extensions/CGSize+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		4F25D4771DA42961006B685B /* DialControlSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4FB54ED81DB0CC2C003C2970 /* :extensions */,
 				4F25D4781DA42961006B685B /* AppDelegate.swift */,
 				4F25D47F1DA42961006B685B /* Assets.xcassets */,
 				4F25D48E1DA42F8F006B685B /* DialUIView.swift */,
@@ -71,6 +76,15 @@
 				4F25D47A1DA42961006B685B /* ViewController.swift */,
 			);
 			path = DialControlSwift;
+			sourceTree = "<group>";
+		};
+		4FB54ED81DB0CC2C003C2970 /* :extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */,
+				4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */,
+			);
+			name = ":extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +164,9 @@
 			files = (
 				4F25D47B1DA42961006B685B /* ViewController.swift in Sources */,
 				4F25D4791DA42961006B685B /* AppDelegate.swift in Sources */,
+				4FB54EDB1DB0CC45003C2970 /* CGPoint+ext.swift in Sources */,
 				4F25D48F1DA42F8F006B685B /* DialUIView.swift in Sources */,
+				4FB54EDC1DB0CC45003C2970 /* CGSize+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
