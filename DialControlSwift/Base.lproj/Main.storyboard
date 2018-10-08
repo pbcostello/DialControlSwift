@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bhg-re-nBT">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YJ-5G-Ljf" userLabel="container">
+                                <rect key="frame" x="16" y="277.5" width="343" height="113"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XzT-LZ-bc4" userLabel="Label0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XzT-LZ-bc4" userLabel="Label0">
+                                        <rect key="frame" x="0.0" y="99" width="97.5" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XzT-LZ-bc4" secondAttribute="height" multiplier="125:18" id="BMk-s9-8cN"/>
                                         </constraints>
@@ -31,7 +33,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-SQ-Ixn" userLabel="Label1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-SQ-Ixn" userLabel="Label1">
+                                        <rect key="frame" x="244.5" y="99" width="97.5" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yrl-SQ-Ixn" secondAttribute="height" multiplier="125:18" id="U8J-NJ-oRC"/>
                                         </constraints>
@@ -39,9 +42,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-gg-WC9" userLabel="DialUI View 1" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-gg-WC9" userLabel="DialUI View 0" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="97.5" height="97.5"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zny-Ci-TmM"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zny-Ci-TmM">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="97.5"/>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Zny-Ci-TmM" firstAttribute="leading" secondItem="aXk-gg-WC9" secondAttribute="leading" id="2j7-ig-aq1"/>
@@ -53,11 +59,15 @@
                                         <connections>
                                             <outlet property="background" destination="Zny-Ci-TmM" id="Ldg-F1-Yzd"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="R8D-Dx-byz"/>
+                                            <outlet property="label" destination="XzT-LZ-bc4" id="btr-sy-J5n"/>
                                         </connections>
                                     </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-9s-5qJ" userLabel="DialUI View 2" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-9s-5qJ" userLabel="DialUI View 1" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                        <rect key="frame" x="244.5" y="1" width="97.5" height="97.5"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie02.png" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-U6-Bhi"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie02.png" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-U6-Bhi">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="97.5"/>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="uXj-U6-Bhi" secondAttribute="trailing" id="5a9-lN-ERo"/>
@@ -68,6 +78,7 @@
                                         <connections>
                                             <outlet property="background" destination="uXj-U6-Bhi" id="ph6-pF-GnI"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="v5P-9X-fCJ"/>
+                                            <outlet property="label" destination="yrl-SQ-Ixn" id="S37-G8-JlB"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -90,8 +101,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin the dials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Yv-YxN">
+                                <rect key="frame" x="136" y="20" width="103" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="0ci-bu-ynY"/>
                                     <constraint firstAttribute="height" constant="21" id="qsn-Ah-Ulg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,8 +120,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="labels" destination="XzT-LZ-bc4" collectionClass="NSMutableArray" id="bTh-tj-4Go"/>
-                        <outletCollection property="labels" destination="yrl-SQ-Ixn" collectionClass="NSMutableArray" id="CT9-ir-Bu7"/>
+                        <outletCollection property="dials" destination="aXk-gg-WC9" collectionClass="NSMutableArray" id="Gqi-dS-HbC"/>
+                        <outletCollection property="dials" destination="DXj-9s-5qJ" collectionClass="NSMutableArray" id="r91-ro-Tgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

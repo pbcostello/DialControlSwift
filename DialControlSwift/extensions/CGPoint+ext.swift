@@ -6,51 +6,46 @@
 //  Copyright © 2016 Patrick Costello. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 extension CGPoint {
     
-    var radian: Float {
+    var radian: CGFloat {
         get {
-            let l = sqrt(Float(x*x)+Float(y*y))
-            if l == 0 {
-                return 0
-            }
-            
-            var radian = fmodf(atan2( Float(x)/l ,Float(y)/l),Float(M_PI*2.0))
-            
-            if radian < 0 {
-                radian += Float(M_PI*2.0)
-            }
-            
-            if radian == -0 {
-                radian = 0
-            }
-            return radian
+            let len: CGFloat = length
+            return len == 0 ? 0 : CGFloat(fmod(atan2(Float(x / len), Float(y / len)), .pi * 2.0))
         }
     }
     
-    func radianToPoint(point: CGPoint) -> Float {
-        //return radian from self to point
-        return fmodf (CGPoint(x:point.x - x, y:point.y - y).radian, Float(M_PI*2.0))
+    var length: CGFloat {
+        return sqrt((x * x) + (y * y))
     }
-
-    func moveAngle(point: CGPoint, previousPoint: CGPoint) ->Float {
+    
+    func radianToPoint(point: CGPoint) -> CGFloat {
+        //return radian from self to point
+        return fmod ((point - self).radian, .pi * 2.0)
+    }
+    
+    static func - (left: CGPoint, right: CGPoint) -> CGPoint {
+        return CGPoint(x: left.x - right.x, y: left.y - right.x)
+    }
+    
+    func moveAngle(point: CGPoint, previousPoint: CGPoint) -> CGFloat {
         //return radian difference from previousPoint to point, self = center
-        var radian1 = radianToPoint(point:point)
-        let radian2 = radianToPoint(point:previousPoint)
+        
+        var radian1: CGFloat = radianToPoint(point: point)
+        let radian2: CGFloat = radianToPoint(point: previousPoint)
         
         if radian1 < radian2 {
-            radian1 += Float(M_PI*2.0)
+            radian1 += .pi * 2.0
         }
         
-        let diff = radian1-radian2
+        let diff: CGFloat = radian1 - radian2
         
-        if diff > Float(M_PI) {
-            return -(radian2 - radian1 + Float(M_PI*2.0))
+        if diff > .pi {
+            return -(radian2 - radian1 + (.pi * 2.0))
         }
         return diff
     }
-
     
 }

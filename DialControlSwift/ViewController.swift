@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, DialUIViewProtocol {
 
-    @IBOutlet var labels: [UILabel]!
+    @IBOutlet var dials: [DialUIView] = []
     
-    func dialUIViewMoved(dialUIView: DialUIView) {
-        labels[dialUIView.tag].text = String(format:"%.2f",dialUIView.rotation)
+    func dialUIViewMoved(_ dialUIView: DialUIView) {
+        dialUIView.label?.text = String(format: "%.2f°", dialUIView.rotation * 180.0 / .pi)
     }
-
+    
 }
 

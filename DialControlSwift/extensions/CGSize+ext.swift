@@ -6,13 +6,19 @@
 //  Copyright © 2016 Patrick Costello. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 extension CGSize {
     
-    var half: CGPoint {
+    var half: CGSize {
         get {
-            return CGPoint(x: width/2.0, y: height/2.0)
+            return CGSize(width: width / 2.0, height: height / 2.0)
+        }
+    }
+
+    var CGPoint: CGPoint {
+        get {
+            return CoreGraphics.CGPoint(x: width, y: height)
         }
     }
     
