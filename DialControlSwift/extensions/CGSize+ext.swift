@@ -11,15 +11,11 @@ import CoreGraphics
 extension CGSize {
     
     var half: CGSize {
-        get {
-            return CGSize(width: width / 2.0, height: height / 2.0)
-        }
+        return CGSize(width: width * 0.5, height: height * 0.5)
     }
 
     var CGPoint: CGPoint {
-        get {
-            return CoreGraphics.CGPoint(x: width, y: height)
-        }
+        return CoreGraphics.CGPoint(x: width, y: height)
     }
     
 }

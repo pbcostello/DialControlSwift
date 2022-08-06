@@ -9,10 +9,10 @@
 import UIKit
 
 @objc protocol DialUIViewProtocol {
-    func dialUIViewMoved(_ dialUIView:DialUIView)
+    func dialUIViewMoved(_ dialUIView: DialUIView)
 }
 
-class DialUIView : UIView {
+class DialUIView :UIView {
  
     @IBOutlet var background: UIImageView?
     @IBOutlet var label: UILabel?

@@ -11,10 +11,8 @@ import CoreGraphics
 extension CGPoint {
     
     var radian: CGFloat {
-        get {
-            let len: CGFloat = length
-            return len == 0 ? 0 : CGFloat(fmod(atan2(Float(x / len), Float(y / len)), .pi * 2.0))
-        }
+        let len: CGFloat = length
+        return len == 0 ? 0 : CGFloat(fmod(atan2(Float(x / len), Float(y / len)), .pi * 2.0))
     }
     
     var length: CGFloat {
@@ -41,11 +39,7 @@ extension CGPoint {
         }
         
         let diff: CGFloat = radian1 - radian2
-        
-        if diff > .pi {
-            return -(radian2 - radian1 + (.pi * 2.0))
-        }
-        return diff
+        return diff > .pi ? -(radian2 - radian1 + (.pi * 2.0)) : diff
     }
     
 }
