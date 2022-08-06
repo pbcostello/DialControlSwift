@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +28,7 @@
                                             <constraint firstAttribute="width" secondItem="XzT-LZ-bc4" secondAttribute="height" multiplier="125:18" id="BMk-s9-8cN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-SQ-Ixn" userLabel="Label1">
@@ -39,10 +37,10 @@
                                             <constraint firstAttribute="width" secondItem="yrl-SQ-Ixn" secondAttribute="height" multiplier="125:18" id="U8J-NJ-oRC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-gg-WC9" userLabel="DialUI View 0" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-gg-WC9" userLabel="DialUI View 0" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="97.5" height="97.5"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zny-Ci-TmM">
@@ -57,12 +55,12 @@
                                             <constraint firstAttribute="bottom" secondItem="Zny-Ci-TmM" secondAttribute="bottom" id="rqY-za-HDP"/>
                                         </constraints>
                                         <connections>
+                                            <action selector="dialValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="THh-XA-IOD"/>
                                             <outlet property="background" destination="Zny-Ci-TmM" id="Ldg-F1-Yzd"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="R8D-Dx-byz"/>
                                             <outlet property="label" destination="XzT-LZ-bc4" id="btr-sy-J5n"/>
                                         </connections>
                                     </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-9s-5qJ" userLabel="DialUI View 1" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-9s-5qJ" userLabel="DialUI View 1" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
                                         <rect key="frame" x="244.5" y="1" width="97.5" height="97.5"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="pie02.png" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-U6-Bhi">
@@ -76,8 +74,8 @@
                                             <constraint firstItem="uXj-U6-Bhi" firstAttribute="top" secondItem="DXj-9s-5qJ" secondAttribute="top" id="qFN-Wb-3g2"/>
                                         </constraints>
                                         <connections>
+                                            <action selector="dialValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fdM-WP-Cp1"/>
                                             <outlet property="background" destination="uXj-U6-Bhi" id="ph6-pF-GnI"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="v5P-9X-fCJ"/>
                                             <outlet property="label" destination="yrl-SQ-Ixn" id="S37-G8-JlB"/>
                                         </connections>
                                     </view>
@@ -101,7 +99,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin the dials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Yv-YxN">
-                                <rect key="frame" x="136" y="20" width="103" height="21"/>
+                                <rect key="frame" x="136.5" y="0.0" width="102" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qsn-Ah-Ulg"/>
                                 </constraints>
@@ -109,28 +107,61 @@
                                 <color key="textColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-dk-fb2" customClass="DialUIView" customModule="DialControlSwift" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="99" width="90" height="90"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-Js-fyK">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kgg-Js-fyK" firstAttribute="top" secondItem="yNr-dk-fb2" secondAttribute="top" id="29W-u6-fCu"/>
+                                    <constraint firstAttribute="width" constant="90" id="CT9-V0-Pma"/>
+                                    <constraint firstItem="Kgg-Js-fyK" firstAttribute="leading" secondItem="yNr-dk-fb2" secondAttribute="leading" id="K6Y-8T-2Dy"/>
+                                    <constraint firstAttribute="height" constant="90" id="Tyc-Dg-TgE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kgg-Js-fyK" secondAttribute="bottom" id="cWx-wz-GDJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kgg-Js-fyK" secondAttribute="trailing" id="kYJ-Dw-HEF"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dialValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bbm-OO-78G"/>
+                                    <outlet property="background" destination="Kgg-Js-fyK" id="ZoD-ZQ-LpC"/>
+                                    <outlet property="label" destination="Ar0-Lj-CwI" id="E9x-8u-MZK"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar0-Lj-CwI">
+                                <rect key="frame" x="166.5" y="197" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kIb-Ua-l7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ar0-Lj-CwI" firstAttribute="top" secondItem="yNr-dk-fb2" secondAttribute="bottom" constant="8" symbolic="YES" id="6eR-pP-J1W"/>
                             <constraint firstItem="eyq-Yv-YxN" firstAttribute="centerX" secondItem="bhg-re-nBT" secondAttribute="centerX" id="9kt-So-clT"/>
                             <constraint firstItem="5YJ-5G-Ljf" firstAttribute="centerY" secondItem="bhg-re-nBT" secondAttribute="centerY" constant="0.5" id="FGI-2E-yjB"/>
+                            <constraint firstItem="yNr-dk-fb2" firstAttribute="centerX" secondItem="bhg-re-nBT" secondAttribute="centerX" id="ZFQ-tz-R5m"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5YJ-5G-Ljf" secondAttribute="leading" id="rhr-Se-voA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5YJ-5G-Ljf" secondAttribute="trailing" id="sMm-ip-HaQ"/>
                             <constraint firstItem="eyq-Yv-YxN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="slY-eX-a2F"/>
+                            <constraint firstItem="Ar0-Lj-CwI" firstAttribute="centerX" secondItem="yNr-dk-fb2" secondAttribute="centerX" id="xKl-dC-ZEE"/>
+                            <constraint firstItem="yNr-dk-fb2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="z7N-Qj-TXP"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outletCollection property="dials" destination="aXk-gg-WC9" collectionClass="NSMutableArray" id="Gqi-dS-HbC"/>
-                        <outletCollection property="dials" destination="DXj-9s-5qJ" collectionClass="NSMutableArray" id="r91-ro-Tgf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207.5" y="110.625"/>
+            <point key="canvasLocation" x="207.19999999999999" y="110.19490254872565"/>
         </scene>
     </scenes>
     <resources>
         <image name="pie01.png" width="300" height="300"/>
         <image name="pie02.png" width="300" height="300"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
