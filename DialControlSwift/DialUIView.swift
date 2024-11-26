@@ -12,12 +12,12 @@ class DialUIView: UIControl {
     
     @IBOutlet var background: UIImageView?
     @IBOutlet var label: UILabel?
-    var rotation: CGFloat = 0 //(radians)
+    var value: CGFloat = 0 //rotation in radians
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        rotation -= frame.size.half.CGPoint.moveAngle(point: touches.first!.location(in: self), previousPoint: touches.first!.previousLocation(in: self))
-        background?.transform = CGAffineTransform (rotationAngle: rotation)
+        value -= frame.angleDifference(point: touches.first!.location(in: self), previousPoint: touches.first!.previousLocation(in: self))
+        background?.transform = value.rotationTransform
         sendActions(for: UIControl.Event.valueChanged)
     }
 }

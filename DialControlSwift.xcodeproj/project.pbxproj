@@ -17,6 +17,8 @@
 		4F25D48F1DA42F8F006B685B /* DialUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D48E1DA42F8F006B685B /* DialUIView.swift */; };
 		4FB54EDB1DB0CC45003C2970 /* CGPoint+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */; };
 		4FB54EDC1DB0CC45003C2970 /* CGSize+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */; };
+		FA3A118F28C6864700F3A17E /* CGFloat+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A118E28C6864700F3A17E /* CGFloat+ext.swift */; };
+		FA3A119128C6A52000F3A17E /* CGRect+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A119028C6A52000F3A17E /* CGRect+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		4F25D48E1DA42F8F006B685B /* DialUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialUIView.swift; sourceTree = "<group>"; };
 		4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+ext.swift"; path = "extensions/CGPoint+ext.swift"; sourceTree = "<group>"; };
 		4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGSize+ext.swift"; path = "extensions/CGSize+ext.swift"; sourceTree = "<group>"; };
+		FA3A118E28C6864700F3A17E /* CGFloat+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGFloat+ext.swift"; path = "extensions/CGFloat+ext.swift"; sourceTree = "<group>"; };
+		FA3A119028C6A52000F3A17E /* CGRect+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+ext.swift"; path = "extensions/CGRect+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		4FB54ED81DB0CC2C003C2970 /* :extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A118E28C6864700F3A17E /* CGFloat+ext.swift */,
 				4FB54ED91DB0CC45003C2970 /* CGPoint+ext.swift */,
 				4FB54EDA1DB0CC45003C2970 /* CGSize+ext.swift */,
+				FA3A119028C6A52000F3A17E /* CGRect+ext.swift */,
 			);
 			name = ":extensions";
 			sourceTree = "<group>";
@@ -119,7 +125,7 @@
 				TargetAttributes = {
 					4F25D4741DA42961006B685B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = F6Y5878YLC;
+						DevelopmentTeam = V26BL3AZ8Y;
 						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
@@ -163,11 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3A118F28C6864700F3A17E /* CGFloat+ext.swift in Sources */,
 				4F25D47B1DA42961006B685B /* ViewController.swift in Sources */,
 				4F25D4791DA42961006B685B /* AppDelegate.swift in Sources */,
 				4FB54EDB1DB0CC45003C2970 /* CGPoint+ext.swift in Sources */,
 				4F25D48F1DA42F8F006B685B /* DialUIView.swift in Sources */,
 				4FB54EDC1DB0CC45003C2970 /* CGSize+ext.swift in Sources */,
+				FA3A119128C6A52000F3A17E /* CGRect+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F6Y5878YLC;
+				DEVELOPMENT_TEAM = V26BL3AZ8Y;
 				INFOPLIST_FILE = DialControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcostello.DialControlSwift;
@@ -325,7 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F6Y5878YLC;
+				DEVELOPMENT_TEAM = V26BL3AZ8Y;
 				INFOPLIST_FILE = DialControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcostello.DialControlSwift;

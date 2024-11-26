@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func dialValueChanged(_ dial: DialUIView?) {
-        dial?.label?.text = String(format: "%d: %.2f°",dial?.tag ?? 0, (dial?.rotation ?? 0) * 180.0 / .pi)
-
+        dial?.label?.text = String(format: "%d: %.2f°",dial?.tag ?? 0, (dial?.value ?? 0) * 180.0 / .pi)
     }
     
 }
